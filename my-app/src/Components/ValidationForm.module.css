@@ -1,0 +1,36 @@
+.Form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin: 0;
+	margin-top: 45vh;
+}
+
+.email {
+	margin: auto auto;
+	display: flex;
+	margin: 5px 5px 5px 5px;
+	width: 15rem;
+}
+.password {
+	margin: auto auto;
+	display: flex;
+	margin: 5px 5px 5px 5px;
+	width: 15rem;
+}
+
+.button {
+	margin: auto auto;
+	display: flex;
+}
+
+.backGroundGray {
+	background-color: lightgrey;
+	padding: 5px;
+}
+
+.errorLabel {
+	color: red;
+	max-width: 15rem;
+}
