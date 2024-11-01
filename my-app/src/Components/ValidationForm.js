@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import styles from "./ValidationForm.module.css";
 
 export const ValidationFormLayout = () => {
@@ -7,15 +7,6 @@ export const ValidationFormLayout = () => {
 	const [password, setPassword] = useState("");
 	const [passwordRepeat, setPasswordRepeat] = useState("");
 	const [passwordNotEqual, setPasswordNotEqual] = useState("");
-
-	// const submitButtonRef = useRef(null);
-
-	// const checkFullnessFields = () => {
-	// 	console.log(Boolean(email), Boolean(password), Boolean(passwordRepeat));
-	// 	if (email && password && passwordRepeat) {
-	// 		submitButtonRef.current.focus();
-	// 	}
-	// };
 
 	const onSubmit = (event) => {
 		event.preventDefault();
@@ -54,7 +45,6 @@ export const ValidationFormLayout = () => {
 						placeholder="Email"
 						value={email}
 						onChange={onEmailChange}
-						//onBlur={checkFullnessFields}
 					/>
 					<input
 						className={styles.password}
@@ -66,7 +56,6 @@ export const ValidationFormLayout = () => {
 							setPassword(v.target.value);
 							setPasswordNotEqual(false);
 						}}
-						//onBlur={checkFullnessFields}
 					/>
 					<input
 						className={styles.password}
@@ -78,7 +67,6 @@ export const ValidationFormLayout = () => {
 							setPasswordRepeat(v.target.value);
 							setPasswordNotEqual(false);
 						}}
-						//onBlur={checkFullnessFields}
 					/>
 					<button
 						className={styles.button}
@@ -89,7 +77,6 @@ export const ValidationFormLayout = () => {
 							!password ||
 							!passwordRepeat
 						}
-						//ref={submitButtonRef}
 					>
 						Зарегестрироваться
 					</button>

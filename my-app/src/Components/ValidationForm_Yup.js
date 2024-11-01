@@ -76,7 +76,7 @@ export const ValidationFormLayout = () => {
 						value={password}
 						onChange={(v) => {
 							setPassword(v.target.value);
-							//setPasswordNotEqual(false);
+							errors.passwordRepeat = null;
 						}}
 					/>
 					<input
@@ -87,7 +87,7 @@ export const ValidationFormLayout = () => {
 						value={passwordRepeat}
 						onChange={(v) => {
 							setPasswordRepeat(v.target.value);
-							//setpasswordNotEqual(false);
+							errors.passwordRepeat = null;
 						}}
 					/>
 					<button
